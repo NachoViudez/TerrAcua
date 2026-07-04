@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de plantas para acuarios y terrarios | TerrAcua</title>
+    <meta name="description"
+        content="explora el catalogo de plantas acuaticas y terrestres, insumos y mas. filtra por precio y categorias">
+
+    <meta name="robots" content="index, follow">
+    <!--este no es un link valido, porque github me da otro link, pero lo pongo como ejemplo siguiendo la idea del TP-->
+    <link rel="canonical" href="https://terracua.com.ar/catalogo.html">
+    <link rel="icon" href="img/logo1.png" type="image/png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!--barra de navegacion, uso la misma para los dos-->
+    <nav class="navbar navbar-expand-lg navbar-terracua sticky-top py-2" aria-label="Navegación principal sitio">
+        <!--la "pego" a la parte superior de la pantalla con sticky-->
+        <div class="container-fluid">
+            <!--boton que se encarga de colapsar el menu para las pantallas de tablet y celular-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--los iconos del menu, los saco de bootstrab icons-->
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo2.png" alt="TerrAcua, plantas para acuarios y terrarios"
+                    class=" img-fluid logo-navbar" width="140" height="50">
+            </a>
+
+            <div class="iconos-navbar d-flex align-items-center gap-3 order-lg-3">
+                <a href="#" class="icono-navbar d-none d-lg-inline-flex" aria-label="Busqueda">
+                    <i class="bi bi-search fs-3"></i>
+                </a>
+                <a href="index.html#acceso" class="icono-navbar d-none d-lg-inline-flex" aria-label="Registrarme">
+                    <i class="bi bi-person-plus-fill fs-3"></i>
+                </a>
+                <a href="#" class="icono-navbar d-inline-flex" aria-label="Ver carrito de compras">
+                    <i class="bi bi-cart-fill fs-3"></i>
+                </a>
+            </div>
+            <!--el "menu", con el href referencio a donde quiero que me lleve de la pagina o a otra pestaña-->
+            <div class="collapse navbar-collapse order-lg-2" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <!--aria current me dice que esta es la pagina en la que esta ahora-->
+                        <a class="nav-link mx-lg-3 " href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-3 active" aria-current="page" href="catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-3" href="index.html#asesoramiento">Asesoramiento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-3" href="#">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-3" href="#contacto">Contacto</a>
+                    </li>
+                    <!--los oculto en pantallas de pc-->
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-search me-2"></i>Buscar
+                        </a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="index.html#acceso">
+                            <i class="bi bi-person-plus-fill me-2"></i>Registrarme
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="banner-catalogo container-fluid d-flex justify-content-center align-items-start">
+            <h1>Nuestros productos</h1>
+        </section>
+        <div class="container-fluid px-3 px-lg-5">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrum-catalogo">
+                    <li class="breadcrumb-item">
+                        <a href="index.html" aria-label="Inicio">
+                            <i class="bi bi-house-door"></i>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page">Catálogo</li>
+                    <li class="breadcrumb-item active breadcrumb-categoria" aria-current="page"></li>
+                </ol>
+            </nav>
+
+            <section class="controles-catalogo mb-4">
+                <div class="row align-items-end g-3">
+
+                    <!-- lo dejo que se vea solo en "PC"-->
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <h2 class="form-label">Categorías</h2>
+                        <div class="dropdown" data-filtro="categoria">
+                            <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Todas
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button">Todas</button></li>
+                                <li><button class="dropdown-item" type="button">Plantas acuáticas</button></li>
+                                <li><button class="dropdown-item" type="button">Plantas terrestres</button></li>
+                                <li><button class="dropdown-item" type="button">Insumos</button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <h2 class="form-label">Precio</h2>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="dropdown w-100" data-filtro="p-min">
+                                <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Min
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><button class="dropdown-item" type="button">$1000</button></li>
+                                    <li><button class="dropdown-item" type="button">$3000</button></li>
+                                    <li><button class="dropdown-item" type="button">$5000</button></li>
+                                </ul>
+                            </div>
+                            <span>—</span>
+                            <div class="dropdown w-100" data-filtro="p-max">
+                                <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Max
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><button class="dropdown-item" type="button">$5000</button></li>
+                                    <li><button class="dropdown-item" type="button">$10000</button></li>
+                                    <li><button class="dropdown-item" type="button">$15000</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3 ms-lg-auto order-2">
+                        <h2 class="form-label d-none d-lg-block">Ordenar por</h2>
+                        <div class="dropdown" data-filtro="orden">
+                            <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Ordenar
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><button class="dropdown-item" type="button">Más vendidos</button></li>
+                                <li><button class="dropdown-item" type="button">Menor precio</button></li>
+                                <li><button class="dropdown-item" type="button">Mayor precio</button></li>
+                                <li><button class="dropdown-item" type="button">Novedades</button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                       <!--este es el boton de filtros que es un collapse, solo se ve de "tablet" para abajo -->
+                    <div class="col-6 d-lg-none order-1">
+                        <button class="btn btn-outline-secondary w-100 fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#filtrosCollapse" aria-expanded="false" aria-controls="filtrosCollapse">
+                            Filtros
+                        </button>
+                    </div>
+
+                    <!-- aca "repito" lo que hay en PC pero dentro del collapse -->
+                    <div class="col-12 d-lg-none collapse order-3" id="filtrosCollapse">
+                        <div class="filtros-panel p-3">
+                            <div class="mb-3">
+                                <h2 class="form-label h6">Categorías</h2>
+                                <div class="dropdown" data-filtro="categoria">
+                                    <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Todas
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><button class="dropdown-item" type="button">Todas</button></li>
+                                        <li><button class="dropdown-item" type="button">Plantas acuáticas</button></li>
+                                        <li><button class="dropdown-item" type="button">Plantas terrestres</button></li>
+                                        <li><button class="dropdown-item" type="button">Insumos</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="form-label h6">Precio</h2>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="dropdown w-100" data-filtro="p-min">
+                                        <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Min
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><button class="dropdown-item" type="button">$1000</button></li>
+                                            <li><button class="dropdown-item" type="button">$3000</button></li>
+                                            <li><button class="dropdown-item" type="button">$5000</button></li>
+                                        </ul>
+                                    </div>
+                                    <span>—</span>
+                                    <div class="dropdown w-100" data-filtro="p-max">
+                                        <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Max
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><button class="dropdown-item" type="button">$5000</button></li>
+                                            <li><button class="dropdown-item" type="button">$10000</button></li>
+                                            <li><button class="dropdown-item" type="button">$15000</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="productos-catalogo mb-5" aria-labelledby="productos-catalogo-titulo">
+                <h2 id="productos-catalogo-titulo" class="visually-hidden">Listado de productos</h2>
+
+                <div class="row g-4">
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <!--reutilizo lo de inicio-->
+                        <div class="card catalogo-card h-100">
+                            <img src="img/producto_1_planta_buce.png" class="card-img-top"
+                                alt="Bucephalandra, planta acuática violeta" role="button" data-bs-toggle="modal"
+                                data-bs-target="#modalProducto" data-nombre="Buce"
+                                data-info="Planta de bajos requerimientos" data-precio="$1500"
+                                data-img="img/producto_1_planta_buce.png"
+                                data-alt="Bucephalandra, planta acuática violeta">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Buce</h3>
+                                <p class="card-text">Planta de bajos requerimientos</p>
+                                <p class="fw-bold">$1500</p>
+                                <div class="mt-auto">
+                                    <button class="btn btn-secondary btn-sm ">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card catalogo-card h-100">
+                            <img src="img/producto_2_acuario.png" class="card-img-top" alt="Acuario plantado"
+                                role="button" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                                data-nombre="Acuario plantado" data-info="Acuario listo y plantado" data-precio="$10000"
+                                data-img="img/producto_2_acuario.png" data-alt="Acuario plantado">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Acuario plantado</h3>
+                                <p class="card-text">Acuario listo y plantado</p>
+                                <p class="fw-bold">$10000</p>
+                                <div class="mt-auto">
+                                    <button class="btn btn-secondary btn-sm ">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card catalogo-card h-100">
+                            <img src="img/producto_3_terrarios.png" class="card-img-top"
+                                alt="Terrarios naturales armados" role="button" data-bs-toggle="modal"
+                                data-bs-target="#modalProducto" data-nombre="Terrarios"
+                                data-info="Terrarios de distintas formas armados" data-precio="$$"
+                                data-img="img/producto_3_terrarios.png" data-alt="Terrarios naturales armados">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Terrarios</h3>
+                                <p class="card-text">Terrarios de distintas formas armados</p>
+                                <p class="fw-bold">$$</p>
+                                <div class="mt-auto">
+                                    <button class="btn btn-secondary btn-sm ">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card catalogo-card h-100">
+                            <img src="img/producto_4_planta_violeta.png" class="card-img-top"
+                                alt="Planta terrestre violeta" role="button" data-bs-toggle="modal"
+                                data-bs-target="#modalProducto" data-nombre="Planta violeta"
+                                data-info="Lista para terrarios" data-precio="$1500"
+                                data-img="img/producto_4_planta_violeta.png" data-alt="Planta terrestre violeta">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Planta violeta</h3>
+                                <p class="card-text">lista para terrario</p>
+                                <p class="fw-bold">$2000</p>
+                                <div class="mt-auto">
+                                    <button class="btn btn-secondary btn-sm ">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card catalogo-card h-100">
+                            <img src="img/producto_5_helecho.png" class="card-img-top" alt="Helecho acuático"
+                                role="button" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                                data-nombre="Helecho" data-info="Helecho de Java" data-precio="$1500"
+                                data-img="img/producto_5_helecho.png" data-alt="Helecho acuático">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Helecho</h3>
+                                <p class="card-text">helecho de Java</p>
+                                <p class="fw-bold">$1500</p>
+                                <div class="mt-auto">
+                                    <button class="btn btn-secondary btn-sm ">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card catalogo-card h-100">
+                            <img src="img/producto_6_sustrato.png" class="card-img-top"
+                                alt="Sustrato para acuarios plantados" role="button" data-bs-toggle="modal"
+                                data-bs-target="#modalProducto" data-nombre="Sustrato"
+                                data-info="Para terrarios y acuarios" data-precio="$3000"
+                                data-img="img/producto_6_sustrato.png" data-alt="Sustrato para acuarios plantados">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Sustrato</h3>
+                                <p class="card-text">para terrarios y acuarios</p>
+                                <p class="fw-bold">$3000</p>
+                                <div class="mt-auto">
+                                    <button class="btn btn-secondary btn-sm ">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card catalogo-card h-100">
+                            <img src="img/producto_7_planta_verdeT.png" class="card-img-top"
+                                alt="Planta verde terrestre" role="button" data-bs-toggle="modal"
+                                data-bs-target="#modalProducto" data-nombre="Planta verde"
+                                data-info="Lista para terrarios" data-precio="$2000"
+                                data-img="img/producto_7_planta_verdeT.png" data-alt="Planta verde terrestre">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Planta verde</h3>
+                                <p class="card-text">lista para terrarios</p>
+                                <p class="fw-bold">$2000</p>
+                                <div class="mt-auto">
+                                    <button class="btn btn-secondary btn-sm ">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card catalogo-card h-100">
+                            <img src="img/producto_8_hygro.png" class="card-img-top"
+                                alt="Hygrophila, planta acuática verde" role="button" data-bs-toggle="modal"
+                                data-bs-target="#modalProducto" data-nombre="Hygrophila"
+                                data-info="Planta para acuarios" data-precio="$2000" data-img="img/producto_8_hygro.png"
+                                data-alt="Hygrophila, planta acuática verde">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Hygrophila</h3>
+                                <p class="card-text">planta para acuarios</p>
+                                <p class="fw-bold">$2000</p>
+                                <div class="mt-auto">
+                                    <button class="btn btn-secondary btn-sm ">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card catalogo-card h-100">
+                            <img src="img/producto_9_fertilizantes.png" class="card-img-top"
+                                alt="Fertilizantes preparados" role="button" data-bs-toggle="modal"
+                                data-bs-target="#modalProducto" data-nombre="Fertilizantes"
+                                data-info="para mejor crecimiento" data-precio="$2500"
+                                data-img="img/producto_9_fertilizantes.png" data-alt="Fertilizantes preparados">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Fertilizantes</h3>
+                                <p class="card-text">para mejor crecimiento</p>
+                                <p class="fw-bold">$2500</p>
+                                <div class="mt-auto">
+                                    <button class="btn btn-secondary btn-sm ">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card catalogo-card h-100">
+                            <img src="img/producto_10_acuario_vacio.png" class="card-img-top"
+                                alt="urna de vidrio vacia acuarios" role="button" data-bs-toggle="modal"
+                                data-bs-target="#modalProducto" data-nombre="Urna de vidrio"
+                                data-info="urnas de distintos tamáños" data-precio="$$$$$"
+                                data-img="img/producto_10_acuario_vacio.png" data-alt="urna de vidrio vacia acuarios">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Urna de vidrio</h3>
+                                <p class="card-text">urnas de distintos tamáños</p>
+                                <p class="fw-bold">$$$$$</p>
+                                <div class="mt-auto">
+                                    <button class="btn btn-secondary btn-sm ">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card catalogo-card h-100">
+                            <img src="img/producto_11_planta_naranja.png" class="card-img-top" alt="Planta naranja"
+                                role="button" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                                data-nombre="Planta naranja" data-info="lista para plantar" data-precio="$2500"
+                                data-img="img/producto_11_planta_naranja.png" data-alt="Planta naranja">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Planta naranja</h3>
+                                <p class="card-text">lista para plantar</p>
+                                <p class="fw-bold">$2500</p>
+                                <div class="mt-auto">
+                                    <button class="btn btn-secondary btn-sm ">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card catalogo-card h-100">
+                            <img src="img/producto_12_musgo.png" class="card-img-top" alt="musgo decorativo"
+                                role="button" data-bs-toggle="modal" data-bs-target="#modalProducto" data-nombre="Musgo"
+                                data-info="Planta resistente" data-precio="$2000" data-img="img/producto_12_musgo.png"
+                                data-alt="musgo decorativo">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Musgo</h3>
+                                <p class="card-text">Planta resistente</p>
+                                <p class="fw-bold">$2000</p>
+                                <div class="mt-auto">
+                                    <button class="btn btn-secondary btn-sm ">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card catalogo-card h-100">
+                            <img src="img/producto_13_herramientas.png" class="card-img-top"
+                                alt="Herramientas mantenimiento" role="button" data-bs-toggle="modal"
+                                data-bs-target="#modalProducto" data-nombre="Herramientas"
+                                data-info="Para mantenimientos" data-precio="$4000"
+                                data-img="img/producto_13_herramientas.png" data-alt="Herramientas mantenimiento">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Herramientas</h3>
+                                <p class="card-text">Para mantenimientos</p>
+                                <p class="fw-bold">$4000</p>
+                                <div class="mt-auto">
+                                    <button class="btn btn-secondary btn-sm ">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card catalogo-card h-100">
+                            <img src="img/producto_1_planta_buce.png" class="card-img-top"
+                                alt="Bucephalandra, planta acuática violeta" role="button" data-bs-toggle="modal"
+                                data-bs-target="#modalProducto" data-nombre="Buce"
+                                data-info="Planta de bajos requerimientos" data-precio="$1500"
+                                data-img="img/producto_1_planta_buce.png"
+                                data-alt="Bucephalandra, planta acuática violeta">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Buce</h3>
+                                <p class="card-text">Planta de bajos requerimientos</p>
+                                <p class="fw-bold">$1500</p>
+                                <div class="mt-auto">
+                                    <button class="btn btn-secondary btn-sm ">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <nav class="paginacion-catalogo mb-5" aria-label="Paginacion del catalogo">
+                <ul class="pagination justify-content-center align-items-center gap-3">
+                    <li class="page-item primero">
+                        <a class="page-link" href="#" aria-label="Página anterior">
+                            <i class="bi bi-chevron-left"></i>
+                        </a>
+                    </li>
+
+                    <li class="page-item active">
+                        <a class="page-link fs-3" href="#">1</a>
+                    </li>
+
+                    <li class="page-item">
+                        <a class="page-link fs-3" href="#">2</a>
+                    </li>
+
+                    <li class="page-item">
+                        <a class="page-link fs-3" href="#">3</a>
+                    </li>
+
+                    <li class="page-item">
+                        <a class="page-link fs-3" href="#">4</a>
+                    </li>
+
+                    <li class="page-item">
+                        <a class="page-link fs-3" href="#">5</a>
+                    </li>
+
+                    <li class="page-item ultimo">
+                        <a class="page-link" href="#" aria-label="Página siguiente">
+                            <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </main>
+
+    <!--uso el mismo footer para los 2-->
+    <footer class="footer-terracua py-4 text-light" id="contacto">
+        <div class="container-fluid px-lg-5">
+            <div class="row g-4">
+
+                <div class="col-12 col-md-3 text-center text-md-start">
+                    <a href="index.html" aria-label="Volver al inicio de TerrAcua">
+                        <img src="img/logo3.png" alt="TerrAcua - Plantas para acuarios y terrarios"
+                            class="img-fluid logo-footer">
+                    </a>
+                </div>
+                <div class="col-6 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <h4>Contactos</h4>
+                            <address style="font-style: normal;">
+                                <p class="mb-1">TerrAcuaContacto@gmail.com</p>
+                                <p class="mb-1">Calle muy real 1234 - BA</p>
+                                <p class="mb-0">011-95406773</p>
+                            </address>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>Ayuda</h4>
+                            <ul class="list-unstyled">
+                                <li><a class="text-decoration-none text-light" href="#">Políticas de envíos</a>
+                                </li>
+                                <li><a class="text-decoration-none text-light" href="#">Términos y
+                                        condiciones</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-2">
+                    <h4>Nuestras redes</h4>
+                    <div class="d-flex flex-column flex-md-row gap-3">
+                        <a href="https://www.facebook.com/" class="text-decoration-none text-light" target="_blank"
+                            rel="noopener" aria-label="Redes Facebook">
+                            <i class="bi bi-facebook fs-2"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" class="text-decoration-none text-light" target="_blank"
+                            rel="noopener" aria-label="Redes Instagram">
+                            <i class="bi bi-instagram fs-2"></i>
+                        </a>
+                        <a href="https://x.com/" class="text-decoration-none text-light" target="_blank" rel="noopener"
+                            aria-label="Redes X">
+                            <i class="bi bi-twitter-x fs-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="tituloModal">Producto</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" alt="" class="img-fluid rounded mb-3" id="imagenModal">
+                    <p id="infoModal"></p>
+                    <p class="fw-bold" id="precioModal"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

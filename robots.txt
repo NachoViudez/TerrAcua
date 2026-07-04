@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://terracua.com.ar/sitemap.xml
