@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://terracua.com.ar/sitemap.xml
+Sitemap: https://nachoviudez.github.io/TerrAcua/sitemap.xml
