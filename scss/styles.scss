@@ -1,0 +1,575 @@
+/*defino mis variables de colores para poder usarlas con bootstrap*/
+$verde-oscuro: #14331e;
+$verde-primario: #25644c;
+$verde-botones: #3b6430;
+$beige: #f7f2ec;
+$beige-oscuro: #eae3da;
+
+$body-bg: $beige;
+$body-color: $verde-oscuro;
+$primary: $verde-primario;
+$secondary: $verde-botones;
+
+$btn-border-color: rgb(6, 40, 9);
+
+$card-border-radius: 0.8rem;
+
+$font-family-sans-serif: "Roboto Slab", serif;
+$headings-font-weight: 600;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+.btn {
+  border-color: $verde-oscuro !important;
+  /*para que se aplique si o si*/
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.carousel-indicators {
+
+  /*aca defino el estilo de los btn indicators de los carousel*/
+  [data-bs-target] {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin: 0 0.4rem;
+    opacity: .8;
+    background-color: rgba(#E4DBCC, .5);
+
+    @media screen and (max-width: 768px) {
+      width: 1.2rem;
+      height: 1.2rem;
+
+    }
+  }
+
+  .active {
+    background-color: $verde-botones;
+    opacity: 1;
+  }
+
+}
+
+.navbar-terracua {
+  background-color: $beige;
+
+  .navbar-toggler {
+    border: 0;
+    padding: 0.35rem;
+
+    &:focus,
+    &:hover {
+      box-shadow: 0 0 0 3px rgba($primary, .5);
+    }
+  }
+
+  .nav-link {
+    color: $verde-oscuro;
+    font-weight: 700;
+
+    &:hover,
+    &.active {
+      color: $verde-primario;
+    }
+  }
+
+  .logo-navbar {
+    max-height: 60px;
+    width: auto;
+  }
+
+  .icono-navbar {
+    align-items: center;
+    display: inline-flex;
+    /*lo dejo repetido para establecerlo por defecto*/
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    text-decoration: none;
+    color: $verde-oscuro;
+
+
+    &:hover {
+      color: $verde-primario;
+    }
+  }
+}
+
+
+.banner-hero {
+  background-color: rgba(#E4DBCC, 1);
+  background-image: url("../img/fondo-inicio-hero.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  overflow-x: hidden;
+
+  .texto-hero {
+    margin-top: -2.5rem;
+  }
+
+  .carousel-inner {
+    aspect-ratio: 4 / 3;
+  }
+
+  .imagen-hero {
+    border-radius: 1rem;
+    box-shadow: 0 .2rem 1rem rgba($verde-oscuro, .20);
+    object-fit: cover;
+
+  }
+
+  @media screen and (max-width: 768px) {
+    background-size: cover;
+    color: white;
+  }
+
+}
+
+.categorias-principales {
+  .slide-categoria {
+    align-items: center;
+    text-align: center;
+    min-width: 0;
+  }
+
+  .cont-categoria {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    min-width: 0;
+  }
+
+
+  .card {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    min-width: 0;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .cat-btn {
+    align-items: center;
+    background-color: $beige;
+    border: 1px solid $verde-oscuro;
+    border-radius: 30%;
+    display: flex;
+    flex: 0 0 auto;
+    height: 3rem;
+    width: 2rem;
+    justify-content: center;
+
+    &:active {
+      background-color: $verde-primario;
+      color: white;
+    }
+
+  }
+
+  @media screen and (min-width: 768px) {
+    .card {
+      flex: 0 0 calc(100%/2 - 0.5rem);
+    }
+  }
+
+  @media screen and (min-width: 1140px) {
+    .card {
+      flex: 0 0 calc(100%/3 - 0.66rem);
+    }
+  }
+}
+
+.productos-destacados {
+
+  .carousel-inner {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .carousel-item {
+    scroll-snap-align: start;
+    display: block;
+    margin-right: 0;
+    flex: 0 0 calc(100%/2);
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+
+  }
+
+  .card {
+    height: 100%;
+    background-color: $beige-oscuro;
+    margin: 0;
+
+    &:hover {
+      box-shadow: 0 .5rem 1.5rem rgba($verde-oscuro, .15);
+      transform: translateY(-1px);
+    }
+
+    .btn {
+      font-weight: 600;
+    }
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    height: 3rem;
+    width: 2rem;
+    top: 50%;
+    background-color: $beige;
+    border: 1px solid $verde-oscuro;
+    border-radius: 0.4rem;
+    opacity: 1;
+
+    &:active {
+      background-color: $verde-primario;
+      color: $beige;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+
+    .carousel-item {
+      flex: 0 0 calc(100%/3);
+    }
+
+    .card-img-top {
+      height: 140px;
+    }
+  }
+
+  @media screen and (min-width: 1140px) {
+    .carousel-item {
+      flex: 0 0 calc(100%/4);
+    }
+
+
+    .card-img-top {
+      height: 200px;
+    }
+  }
+
+}
+
+.asesoramiento {
+
+  .carousel,
+  .carousel-inner,
+  .carousel-item,
+  .carousel-item.active {
+    height: 100%;
+  }
+
+
+  .card-asesoramiento {
+    margin: 0 auto;
+    background-color: $beige-oscuro;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .card-asesoramiento img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+
+  .indic-asesoramiento {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  .indic-asesoramiento {
+    [data-bs-target] {
+      width: .9rem;
+      height: .9rem;
+      border-radius: 50%;
+      background-color: $verde-primario;
+    }
+  }
+
+  .indic-asesoramiento .active {
+    background-color: $verde-oscuro;
+  }
+
+  .asesoramiento-info {
+    background-color: $beige-oscuro;
+    padding: 2rem;
+    border: 1px solid rgb(187, 187, 184);
+    border-radius: .8rem;
+    height: 100%;
+    box-sizing: border-box;
+
+    h3 {
+      color: $verde-oscuro;
+      font-weight: 700;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: .5rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+
+    .card-asesoramiento,
+    .asesoramiento-info {
+      text-align: left;
+    }
+
+    .card-asesoramiento img {
+      height: 180px;
+    }
+
+    .asesoramiento-info {
+      padding: 1.25rem;
+    }
+  }
+}
+
+.seccion-acceso {
+  background-color: $beige-oscuro;
+
+  .info-acceso {
+    align-items: center;
+    display: flex;
+    gap: .5rem;
+    justify-content: flex-start;
+
+  }
+
+  .icono-acceso {
+    color: $verde-primario;
+    flex-shrink: 0; // que no se achique si el texto al lado es largo
+    font-size: 3rem;
+  }
+
+  h3 {
+    color: $verde-oscuro;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 1141px) {
+    text-align: center;
+  }
+
+  @media (max-width: 769px) {
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.footer-terracua {
+  background-color: $verde-oscuro;
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  p,
+  address {
+    font-size: 0.9rem;
+    overflow-wrap: break-word; // para que no se salga el email
+  }
+
+  a:hover {
+    color: $beige-oscuro;
+  }
+
+  .logo-footer {
+    max-height: 200px;
+    width: auto;
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+
+    .d-flex {
+      justify-content: center;
+    }
+  }
+}
+
+
+.banner-catalogo {
+   background-color: rgba(#E3D8C6, 1);
+  background-image: url("../img/fondo-catalogo-hero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 80%;
+  min-height: 300px;
+
+  h1 {
+    color: $verde-oscuro;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    min-height: 150px;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.breadcrum-catalogo {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+
+  a {
+    color: $verde-botones;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .breadcrumb-item {
+    color: $verde-botones;
+    font-weight: 700;
+  }
+
+  .breadcrumb-item.active {
+    color: $verde-botones;
+  }
+}
+
+.controles-catalogo {
+
+  .dropdown-menu {
+    background-color: $beige;
+    border: 1px solid $verde-oscuro;
+  }
+
+  .dropdown-item {
+    font-weight: 600;
+  }
+    .dropdown-item:hover {
+    background-color: $beige-oscuro;
+  }
+  .filtros-panel {
+    background-color: $beige-oscuro;
+    border: 1px solid rgba($verde-oscuro, .15);
+  }
+}
+
+.productos-catalogo {
+  .catalogo-card {
+    background-color: $beige-oscuro;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 0 .5rem 1.5rem rgba($verde-oscuro, .15);
+      transform: translateY(-1px);
+    }
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .btn {
+    font-weight: 700;
+  }
+
+  @media screen and (max-width: 768px) {
+    .card-img-top {
+      height: 120px;
+    }
+  }
+
+  @media screen and (min-width: 1140px) {
+    .card-img-top {
+      height: 170px;
+    }
+  }
+}
+
+.paginacion-catalogo {
+  .pagination {
+    margin-bottom: 0;
+  }
+
+  .page-link {
+    background-color: $beige;
+    border: none;
+    color: $verde-botones;
+    font-weight: 700;
+    padding: .4rem .6rem;
+  }
+
+  .page-link:hover {
+    color: $beige;
+    background-color: $verde-botones;
+    border-radius: .35rem;
+  }
+
+  .page-item.active .page-link {
+    background-color: $verde-botones;
+    color: $beige;
+    border-radius: .35rem;
+  }
+
+  .primero .page-link,
+  .ultimo .page-link {
+    border: 2px solid $verde-botones;
+    border-radius: .25rem;
+    font-size: 1rem;
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .pagination {
+      gap: .5rem !important;
+    }
+
+    .page-link {
+      padding: .3rem .5rem;
+    }
+  }
+}
