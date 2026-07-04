@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantas para acuarios y terrarios, insumos y asesoramiento | TerrAcua</title>
+    <meta name="description"
+        content="Tienda online de plantas para acuarios y terrarios, insumos y asesoramiento para llevar naturaleza a tu hogar.">
+        <!--este no es un link valido, porque github me da otro link, pero lo pongo como ejemplo siguiendo la idea del TP-->
+    <link rel="canonical" href="https://terracua.com.ar/index.html">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="img/logo1.png" type="image/png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!--barra de navegacion, uso la misma para los dos-->
+    <nav class="navbar navbar-expand-lg navbar-terracua sticky-top py-2" aria-label="Navegación principal sitio">
+        <!--la "pego" a la parte superior de la pantalla con sticky-->
+        <div class="container-fluid">
+            <!--boton que se encarga de colapsar el menu para las pantallas de tablet y celular-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--los iconos del menu, los saco de bootstrab icons-->
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo2.png" alt="TerrAcua, plantas para acuarios y terrarios"
+                    class=" img-fluid logo-navbar" width="140" height="50">
+            </a>
+
+            <div class="iconos-navbar d-flex align-items-center gap-3 order-lg-3">
+                <a href="#" class="icono-navbar d-none d-lg-inline-flex" aria-label="Busqueda">
+                    <i class="bi bi-search fs-3"></i>
+                </a>
+                <a href="#acceso" class="icono-navbar d-none d-lg-inline-flex" aria-label="Registrarme">
+                    <i class="bi bi-person-plus-fill fs-3"></i>
+                </a>
+                <a href="#" class="icono-navbar d-inline-flex" aria-label="Ver carrito de compras">
+                    <i class="bi bi-cart-fill fs-3"></i>
+                </a>
+            </div>
+            <!--el "menu", con el href referencio a donde quiero que me lleve de la pagina o a otra pestaña-->
+            <div class="collapse navbar-collapse order-lg-2" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <!--aria current me dice que esta es la pagina en la que esta ahora-->
+                        <a class="nav-link mx-lg-3 active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-3" href="catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-3" href="#asesoramiento">Asesoramiento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-3" href="#">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-3" href="#contacto">Contacto</a>
+                    </li>
+                    <!--los oculto en pantallas de pc-->
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-search me-2"></i>Buscar
+                        </a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="#acceso">
+                            <i class="bi bi-person-plus-fill me-2"></i>Registrarme
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="banner-hero">
+            <div class="container-fluid px-2 px-md-4">
+                <div class=" row align-items-center gx-md-5">
+                    <div class="col-12 col-md-6 order-md-2 ">
+                        <!--carousel de bootstrap-->
+                        <div id="carousel-hero" class="carousel slide carousel-fade my-4 pb-4" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <!--aca en cada boton tengo que hacer referencia al carousel para que funcione con #carousel-hero -->
+                                <button type="button" data-bs-target="#carousel-hero" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carousel-hero" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carousel-hero" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/acuario-slide-inicio.png" class="d-block w-100 imagen-hero"
+                                        alt="acuario armado con plantas">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/terrario-slide-inicio.png" class="d-block w-100 imagen-hero"
+                                        alt="terrario armado con plantas">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/guia2.png" class="d-block w-100 imagen-hero"
+                                        alt="terrario con plantas sobre mesa">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-md-6 order-md-1 text-center text-md-start texto-hero">
+                        <h1>Encontrá lo que necesitas</h1>
+                        <p class="lead">
+                            Conoce nuestros productos y lleva la naturaleza a tu hogar
+                        </p>
+                        <a class="btn btn-primary btn-lg my-5 my-md-3 fw-bold" href="catalogo.html">Explorar
+                            tienda</a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categorias-principales mt-5">
+            <div class="container-fluid px-lg-5">
+                <h2>Categorías Principales</h2>
+                <div class="slide-categoria d-flex"><!--va a contener todo el slide con botones-->
+                    <button class="cat-btn cat-btn-prev d-lg-none" aria-label="Categoria anterior">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <div class="cont-categoria d-flex gap-1"><!--para acomodar las cards-->
+                        <a href="catalogo.html?categoria=plantas-acuaticas" class="card my-0 mx-1 card-categoria">
+                            <img src="img/categoria_principal_1.png" class="card-img" alt="categoria plantas acuaticas">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">Plantas acuáticas</h5>
+                            </div>
+                        </a>
+                        <a href="catalogo.html?categoria=plantas-terrestres" class="card my-0 mx-1 card-categoria">
+                            <img src="img/categoria_principal_2.png" class="card-img"
+                                alt="categoria plantas terrestres">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">Plantas terrestres</h5>
+                            </div>
+                        </a>
+                        <a href="catalogo.html?categoria=insumos" class="card my-0 mx-1 card-categoria">
+                            <img src="img/categoria_principal_3.png" class="card-img" alt="categoria insumos">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">Insumos</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <button class="cat-btn cat-btn-next d-lg-none" aria-label="Categoria siguiente">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="productos-destacados mt-5" id="productos-destacados">
+            <div class="container-fluid px-lg-5">
+                <h2>Productos destacados</h2>
+
+                <div id="carousel-productos" class="carousel" data-bs-interval="false">
+                    <div class="carousel-inner ">
+
+                        <div class="carousel-item active">
+                            <div class="card producto-card">
+                                <!--defino todos estos atributos para rellenar el modal con Js-->
+                                <img src="img/producto_1_planta_buce.png" class="card-img-top"
+                                    alt="Bucephalandra, planta acuática violeta" role="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalProducto" data-nombre="Buce"
+                                    data-info="Planta de bajos requerimientos" data-precio="$1500"
+                                    data-img="img/producto_1_planta_buce.png"
+                                    data-alt="Bucephalandra, planta acuática violeta">
+                                <div class="card-body">
+                                    <h3 class="card-title h6">Buce</h3>
+                                    <p class="card-text mb-1">Planta de bajos requerimientos</p>
+                                    <p class="card-text fw-bold">$1500</p>
+                                    <button class="btn btn-secondary btn-sm">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="card producto-card">
+                                <img src="img/producto_2_acuario.png" class="card-img-top" alt="Acuario plantado"
+                                    role="button" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                                    data-nombre="Acuario plantado" data-info="Acuario listo y plantado"
+                                    data-precio="$10000" data-img="img/producto_2_acuario.png"
+                                    data-alt="Acuario plantado">
+                                <div class="card-body">
+                                    <h3 class="card-title h6">Acuario plantado</h3>
+                                    <p class="card-text mb-1">Acuario listo y plantado</p>
+                                    <p class="card-text fw-bold">$10000</p>
+                                    <button class="btn btn-secondary btn-sm">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="card producto-card">
+                                <img src="img/producto_3_terrarios.png" class="card-img-top"
+                                    alt="Terrarios naturales armados" role="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalProducto" data-nombre="Terrarios"
+                                    data-info="Terrarios de distintas formas armados" data-precio="$$"
+                                    data-img="img/producto_3_terrarios.png" data-alt="Terrarios naturales armados">
+                                <div class="card-body">
+                                    <h3 class="card-title h6">Terrarios</h3>
+                                    <p class="card-text mb-1">Terrarios de distintas formas armados</p>
+                                    <p class="card-text fw-bold">$$</p>
+                                    <button class="btn btn-secondary btn-sm">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="card producto-card">
+                                <img src="img/producto_4_planta_violeta.png" class="card-img-top"
+                                    alt="Planta terrestre violeta" role="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalProducto" data-nombre="Planta violeta"
+                                    data-info="Lista para terrarios" data-precio="$1500"
+                                    data-img="img/producto_4_planta_violeta.png" data-alt="Planta terrestre violeta">
+                                <div class="card-body">
+                                    <h3 class="card-title h6">Planta violeta</h3>
+                                    <p class="card-text mb-1">lista para terrarios</p>
+                                    <p class="card-text fw-bold">$1500</p>
+                                    <button class="btn btn-secondary btn-sm">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="card producto-card">
+                                <img src="img/producto_5_helecho.png" class="card-img-top" alt="Helecho acuático"
+                                    role="button" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                                    data-nombre="Helecho" data-info="Helecho de Java" data-precio="$1500"
+                                    data-img="img/producto_5_helecho.png" data-alt="Helecho acuático">
+                                <div class="card-body">
+                                    <h3 class="card-title h6">Helecho</h3>
+                                    <p class="card-text mb-1">Helecho de Java</p>
+                                    <p class="card-text fw-bold">$1500</p>
+                                    <button class="btn btn-secondary btn-sm">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="card producto-card">
+                                <img src="img/producto_6_sustrato.png" class="card-img-top"
+                                    alt="Sustrato para acuarios plantados" role="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalProducto" data-nombre="Sustrato"
+                                    data-info="Para terrarios y acuarios" data-precio="$3000"
+                                    data-img="img/producto_6_sustrato.png" data-alt="Sustrato para acuarios plantados">
+                                <div class="card-body">
+                                    <h3 class="card-title h6">Sustrato</h3>
+                                    <p class="card-text mb-1">Para terrarios y acuarios</p>
+                                    <p class="card-text fw-bold">$3000</p>
+                                    <button class="btn btn-secondary btn-sm">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="card producto-card">
+                                <img src="img/producto_7_planta_verdeT.png" class="card-img-top"
+                                    alt="Planta verde terrestre" role="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalProducto" data-nombre="Planta verde"
+                                    data-info="Lista para terrarios" data-precio="$2000"
+                                    data-img="img/producto_7_planta_verdeT.png" data-alt="Planta verde terrestre">
+                                <div class="card-body">
+                                    <h3 class="card-title h6">Planta verde</h3>
+                                    <p class="card-text mb-1">Lista para terarios</p>
+                                    <p class="card-text fw-bold">$2000</p>
+                                    <button class="btn btn-secondary btn-sm">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="card producto-card">
+                                <img src="img/producto_8_hygro.png" class="card-img-top"
+                                    alt="Hygrophila, planta acuática verde" role="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalProducto" data-nombre="Hygrophila"
+                                    data-info="Planta para acuarios" data-precio="$2000"
+                                    data-img="img/producto_8_hygro.png" data-alt="Hygrophila, planta acuática verde">
+                                <div class="card-body">
+                                    <h3 class="card-title h6">Hygrophila</h3>
+                                    <p class="card-text mb-1">Planta para acuarios</p>
+                                    <p class="card-text fw-bold">$2000</p>
+                                    <button class="btn btn-secondary btn-sm">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="asesoramiento py-5" id="asesoramiento">
+            <div class="container-fluid px-lg-5">
+                <h2 class="mb-4">Asesoramiento</h2>
+
+                <div class="row g-4">
+
+                    <div class="col-12 col-lg-6 ">
+                        <div id="carouselAsesoramiento" class="carousel slide pb-4 pb-lg-0" data-bs-ride="carousel">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="card card-asesoramiento">
+                                        <img src="img/guia1.png" class="card-img-top"
+                                            alt="Guía para armar terrarios naturales">
+                                        <div class="card-body">
+                                            <h3 class="card-title">Guía de terrarios</h3>
+                                            <p class="card-text">Consejos para crear espacios naturales con plantas y
+                                                sustratos adecuados.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="card card-asesoramiento">
+                                        <img src="img/guia2.png" class="card-img-top"
+                                            alt="Blog sobre acuarios plantados">
+                                        <div class="card-body">
+                                            <h3 class="card-title">Blog de acuarismo</h3>
+                                            <p class="card-text">Ideas para mantener acuarios equilibrados, saludables y
+                                                con buena estética.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="card card-asesoramiento">
+                                        <img src="img/guia1-2.png" class="card-img-top"
+                                            alt="Cuidados de plantas acuáticas">
+                                        <div class="card-body">
+                                            <h3 class="card-title">Cuidados básicos</h3>
+                                            <p class="card-text">Recomendaciones para elegir plantas según luz, sustrato
+                                                y tipo de acuario.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-indicators indic-asesoramiento">
+                                <button type="button" data-bs-target="#carouselAsesoramiento" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Guía 1"></button>
+                                <button type="button" data-bs-target="#carouselAsesoramiento" data-bs-slide-to="1"
+                                    aria-label="Guía 2"></button>
+                                <button type="button" data-bs-target="#carouselAsesoramiento" data-bs-slide-to="2"
+                                    aria-label="Guía 3"></button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <article class="asesoramiento-info d-flex flex-column justify-content-center ">
+                            <h3>¿No sabés por dónde empezar?</h3>
+                            <p>Te ayudamos a elegir plantas, sustratos e insumos según el espacio, la luz disponible y
+                                el tipo de acuario o terrario que quieras armar. </p>
+                            <ul>
+                                <li>Selección de plantas acuáticas y terrestres.</li>
+                                <li>Recomendaciones de sustrato e iluminación.</li>
+                                <li>Armado inicial y mantenimiento básico.</li>
+                            </ul>
+                            <div>
+                                <a href="#contacto" class="btn btn-secondary">
+                                    Consultar asesoramiento
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-acceso mt-5 pb-4" id="acceso">
+            <div class="container">
+                <div class="row align-items-center justify-content-center g-4">
+                    <div class="col-12 col-lg-5">
+                        <div class="info-acceso">
+                            <i class="bi bi-envelope icono-acceso" aria-hidden="true"></i>
+
+                            <div>
+                                <h2>Se parte de TerrAcua</h2>
+                                <p>Registrate y recibí novedades y promociones exclusivas</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-7">
+                        <form class="form-acceso">
+                            <div class="row g-3 justify-content-lg-start">
+                                <div class="col-12 col-md-4">
+                                    <label for="email" class="visually-hidden">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Tu Email" required>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <label for="password" class="visually-hidden">Contraseña</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Contraseña"
+                                        required>
+                                </div>
+
+                                <div class="col-12 col-md-auto">
+                                    <button type="submit" class="btn btn-secondary w-100">
+                                        Iniciar sesión
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="col-12 col-md-3 mt-3">
+                                <button type="button" class="btn btn-outline-secondary w-100" data-bs-toggle="modal"
+                                    data-bs-target="#modalRegistro">
+                                    Registrarme
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--uso el mismo footer para los 2-->
+    <footer class="footer-terracua py-4 text-light" id="contacto">
+        <div class="container-fluid px-lg-5">
+            <div class="row g-4">
+
+                <div class="col-12 col-md-3 text-center text-md-start">
+                    <a href="index.html" aria-label="Volver al inicio de TerrAcua">
+                        <img src="img/logo3.png" alt="TerrAcua - Plantas para acuarios y terrarios"
+                            class="img-fluid logo-footer">
+                    </a>
+                </div>
+                <div class="col-6 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <h4>Contactos</h4>
+                            <address style="font-style: normal;">
+                                <p class="mb-1">TerrAcuaContacto@gmail.com</p>
+                                <p class="mb-1">Calle muy real 1234 - BA</p>
+                                <p class="mb-0">011-95406773</p>
+                            </address>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>Ayuda</h4>
+                            <ul class="list-unstyled">
+                                <li><a class="text-decoration-none text-light" href="#">Políticas de envíos</a></li>
+                                <li><a class="text-decoration-none text-light" href="#">Términos y condiciones</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-2">
+                    <h4>Nuestras redes</h4>
+                    <div class="d-flex flex-column flex-md-row gap-3">
+                        <a href="https://www.facebook.com/" class="text-decoration-none text-light" target="_blank"
+                            rel="noopener" aria-label="Redes Facebook">
+                            <i class="bi bi-facebook fs-2"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" class="text-decoration-none text-light" target="_blank"
+                            rel="noopener" aria-label="Redes Instagram">
+                            <i class="bi bi-instagram fs-2"></i>
+                        </a>
+                        <a href="https://x.com/" class="text-decoration-none text-light" target="_blank" rel="noopener"
+                            aria-label="Redes X">
+                            <i class="bi bi-twitter-x fs-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="tituloModal">Producto</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <!--aca no le tengo que poner el src y el alt porque despues lo va a cargar Js-->
+                    <img src="" alt="" class="img-fluid rounded mb-3" id="imagenModal">
+                    <p id="infoModal"></p>
+                    <p class="fw-bold" id="precioModal"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="tituloModalRegistro" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tituloModalRegistro">Se parte de TerrAcua</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formRegistro">
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="nombreCompleto" class="visually-hidden">Nombre completo</label>
+                                <input type="text" class="form-control mb-2" id="nombreCompleto"
+                                    placeholder="Nombre completo" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="email" class="visually-hidden">Email</label>
+                                <input type="email" class="form-control mb-2" id="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <label for="contra" class="visually-hidden">Contraseña</label>
+                                <input type="password" class="form-control mb-2" id="contra" placeholder="Contraseña"
+                                    required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="confirmarContra" class="visually-hidden">Contraseña</label>
+                                <input type="password" class="form-control mb-2" id="confirmarContra"
+                                    placeholder="Confirmar contraseña" required>
+                            </div>
+                        </div>
+                        <div class="form-check col-12">
+                            <input class="form-check-input" type="checkbox" id="terminosRegistro" required>
+                            <label class="form-check-label" for="terminosRegistro">
+                                Acepto términos y condiciones
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-secondary" form="formRegistro">Registrarme</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
